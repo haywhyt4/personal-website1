@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #222;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+.about-text {
+    display: grid;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+.contact {
+    padding: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #222;
+    color: white;
+}
+
+.project-card:hover {
+    background-color: #ff6600;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+/* Project card improvements */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-wrap: anywhere;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* GitHub link inside project cards */
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-card a:hover {
+    background-color: white;
+    color: #222;
+}
+
+/* Keep the GitHub link readable when hovering over a card */
+.project-card:hover a {
+    background-color: white;
+    color: #222;
+}
+
+.project-card:hover a:hover {
+    background-color: #222;
+    color: white;
+}
+
+/* Improve layout on tablets and smaller screens */
+@media (min-width: 701px) and (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
